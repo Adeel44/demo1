@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		console.log("hello ...")
+		function multiplyBy()
+{
+        var num1 = document.getElementById("firstNumber").value;
+        var num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result").innerHTML = num1 * num2;
+}
+
+function divideBy() 
+{ 
+        var num1 = document.getElementById("firstNumber").value;
+        var num2 = document.getElementById("secondNumber").value;
+document.getElementById("result").innerHTML = num1 / num2;
+}
+function plusBy()
+{
+        var num1 = parseFloat(document.getElementById("firstNumber").value);
+        var num2 = parseFloat(document.getElementById("secondNumber").value);
+        document.getElementById("result").innerHTML = num1 + num2;
+}
+function minusBy()
+{
+        var num1 = document.getElementById("firstNumber").value;
+        var num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result").innerHTML = num1 - num2;
+}
+
+
+
+
+	</script>
+
+</head>
+<body>
+	<form>
+1st Number : <input type="text" id="firstNumber" /><br>
+2nd Number: <input type="text" id="secondNumber" /><br>
+<input type="button" onClick="multiplyBy()" Value="Multiply" />
+<input type="button" onClick="divideBy()" Value="Divide" />
+<input type="button" onClick="plusBy()" Value="Plus " />
+<input type="button" onClick="minusBy()" Value="Minus " />
+
+
+
+
+</form>
+The Result is : 
+<p id="result"></p>
+
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+
+<center>
+
+	Full Name: <input type="text" placeholder=" Full Name " id="name"><br>
+		 Age : <input type="text" placeholder=" Enter age " id="age"><br>
+	    Grade: <input type="text" placeholder=" Full grade " id="grade"><br>
+
+	<button id="btn">Add entry</button> <br><br>
+
+<table id="display" border="2">
+	<tr>
+		<th>Full Name</th>
+		<th>Age</th>
+		<th>Grade</th>
+		<th>Edit</th>
+		<th>Deleate</th>
+	</tr>
+</table>
+</center>
+           <script type="text/javascript">
+
+           	var row = 1;
+
+    	var x = document.getElementById("btn");
+        x.addEventListener("click", displayDetails);
+
+        function displayDetails()
+         {
+         	var name = document.getElementById("name").value;
+         	var age = document.getElementById("age").value;
+         	var grade = document.getElementById("grade").value;
+         	if(!name  || !age || !grade)
+     		 {
+     		 	alert("Plz Fill all the box");
+     		    return ;
+
+     		 }
+     		 var display = document.getElementById("display");
+
+            // inserting new row in table
+     		 var newRow = display.insertRow(row);
+     		 var cell1 = newRow.insertCell(0);
+     		 var cell2 = newRow.insertCell(1);
+     		 var cell3 = newRow.insertCell(2);
+     		 var cell4 = newRow.insertCell(3);
+     		 var cell5 = newRow.insertCell(4);
+
+
+
+            // getting value in row cells
+     		 cell1.innerHTML = name;
+     		 cell2.innerHTML = age;
+     		 cell3.innerHTML = grade;
+     		 cell4.innerHTML = `<a href=" "> Edit</a>`
+     		 cell5.innerHTML = `<a href=" "> Deleate</a>`
+
+
+     		 row++;
+
+        }
+
+        
+
+//     	document.getElementById("entry").addEventListener("click", function() 
+//     	{ 
+//     		var name = document.getElementByID("name").value;
+//     		 var age  = document.getElementByID("age").value;
+//     		 var grade = document.getElementByID("grade").value;
+
+//     		 if(!name == " " || !age == " " || !grade == " ")
+//     		 {
+//     		 	alert("Hello World!");
+//     		    return ;
+
+//     		 }
+
+// });  
+
+    	
+ 
+</script>
+
+
+</body>
+</html>
